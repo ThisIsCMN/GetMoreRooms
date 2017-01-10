@@ -59,6 +59,9 @@ body {
   color: #333;
 }
 
+a {
+  cursor: pointer;
+}
 /* Container
 ============================================================== */
 #container, .container {
@@ -233,29 +236,35 @@ header h1 {
 ============================================================== */
 
 #main {
-  padding: 2em;
+  padding: 3em 1em;
   background: #f7f6f2;
 }
 
-#main h1 {
+#status-messages {
+  padding: .5em;
+  background: #fafafa;
+}
+
+#status-messages h1 {
   font-size: 1.5em;
   text-align: center;
-  margin-bottom: 1em;
+  font-weight: bold;
 }
 #main h2 {
   font-size: 1.5em;
   font-weight: bold;
+  margin-bottom: .85em;
 }
 
 #reservations {
-  width: 47%;
+  width: 64%;
   float: left;
   margin-right: 6%;
   text-align: center;
 }
 
 #rooms {
-  width: 47%;
+  width: 30%;
   float: right;
   text-align: center;
 }
@@ -270,7 +279,7 @@ header h1 {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   text-decoration: none;
 }
 
@@ -279,5 +288,14 @@ header h1 {
   float: left;
   text-align: center;
   padding: .5em;
-  background: #0063a4;
+  font-weight: bold;
+  background: #d8d7d2;
+}
+.room-name, .room-size {
+  display: inline-block;
+  width: 49%;
+}
+.room {
+  padding: 1em .5em;
+  background: #fcfbf9;
 }

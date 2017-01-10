@@ -13,7 +13,7 @@ class App extends Component {
       password: '',
       error: '',
       rooms: [],
-      loggedIn: false
+      reservations: 'You currently have no reservations',
     }
     this.usernameChange = this.usernameChange.bind(this);
     this.passwordChange = this.passwordChange.bind(this);
@@ -67,7 +67,8 @@ class App extends Component {
           submit: this.submitUser,
           verify: this.verifyUser,
           rooms: this.state.rooms,
-          user: this.state.username
+          user: this.state.username,
+          reservations: this.state.reservations
         })}
       </div>
     )
