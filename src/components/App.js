@@ -36,6 +36,7 @@ class App extends Component {
       username: this.state.username,
       password: this.state.password
     }).then((response) => {
+      //localStorage.setItem('redis_jwt_token', response.token);
       browserHistory.push('/dashboard');
     })
   }
@@ -46,6 +47,7 @@ class App extends Component {
       username: this.state.username,
       password: this.state.password
     }).then((response) => {
+      localStorage.setItem('redis_jwt_token', response.token);
       browserHistory.push('dashboard');
     })
   }
