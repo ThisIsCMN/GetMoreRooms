@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import RoomManager from './untouched/RoomManager';
-import Scheduler from './untouched/Scheduler';
 import Header from './Header';
 import axios from 'axios';
 
 
 const Dashboard = (props) =>{
-	console.log(props.children.rooms);
 		return (
 		<div>
 			<Header />
-			<section id="status-messages" className="hidden">
-				<div className="container"></div>
+			<section id="status-messages">
+				<div className="container">
+					<h1>Welcome, {props.children.user} </h1>
+				</div>
 			</section>
 			<section id="main">
 				<div className="container cf">
-					<h1>Welcome, </h1>
 					<div id="reservations">
 						<h2>Your Reservations</h2>
 						<ul>
-							Reservations
+							{props.children.reservations}
 						</ul>
 						<a href="#" className="dashboard-button">Make Reservation</a>
 					</div>
@@ -30,7 +28,7 @@ const Dashboard = (props) =>{
 							<div className="name">Name</div>
 							<div className="capacity">Capacity</div>
 						</div>
-						
+
 						<ul>
 							{props.children.rooms.map(function(room, index) {
 								return (
