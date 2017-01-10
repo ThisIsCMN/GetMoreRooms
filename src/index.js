@@ -4,6 +4,7 @@ import App from './components/App';
 import Login from './components/Login';
 import CreateUser from './components/CreateUser';
 import Dashboard from './components/Dashboard';
+import AddReservation from './components/AddReservation';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
 
@@ -13,7 +14,8 @@ ReactDOM.render((
       <IndexRoute component={CreateUser} />
       <Route path="login" component={Login} />
       <Route path="signup" component={CreateUser} />
-      <Route path="dashboard" component={Dashboard} />
+      <Route path="dashboard" component={Dashboard} />    
+      <Route path="add-reservation" component={AddReservation} />
     </Route>
   </Router>
 ), document.getElementById('app'));
