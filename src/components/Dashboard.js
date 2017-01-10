@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import axios from 'axios';
+import AddReservation from './AddReservation';
+import { broswerHistory, Link } from 'react-router';
 
 
 const Dashboard = (props) =>{
@@ -19,7 +21,7 @@ const Dashboard = (props) =>{
 						<ul>
 							{props.children.reservations}
 						</ul>
-						<a href="#" className="dashboard-button">Make Reservation</a>
+						<Link to="add-reservation" className="dashboard-button">Make Reservation</Link>
 					</div>
 
 					<div id="rooms">

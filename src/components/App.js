@@ -41,12 +41,25 @@ class App extends Component {
   }
 
   verifyUser() {
-    console.log(this.state);
+    console.log('click!');
     axios.post('/user/validate', {
       username: this.state.username,
       password: this.state.password
     }).then((response) => {
       browserHistory.push('dashboard');
+    })
+  }
+
+  addRoom(name, capacity) {
+    const rooms = this.state.rooms.slice();
+    rooms.push({name: name, capacity: capacity});
+    this.setState({rooms: rooms})
+
+    axios.post("/rooms", {
+      name: name, 
+      capacity: capacity
+    }).then((response){
+      console.log(response.data);
     })
   }
 
