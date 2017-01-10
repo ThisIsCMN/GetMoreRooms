@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-=======
-import RoomManager from './untouched/RoomManager';
-import Scheduler from './untouched/Scheduler';
->>>>>>> 5c7ec329893e73be12ca12d08824a912fe82bca5
 import Header from './Header';
 import axios from 'axios';
 
